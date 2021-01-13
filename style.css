@@ -1,0 +1,860 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*公共样式*/
+html,body,div,a,b,nav,li,ul,ol,span,h1,h2,h3,h4,h5,h6,i,em,article,header,footer,input,p,section{
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	font-size: 100%;
+	font-family: "微软雅黑";
+}
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+body{
+	padding-top: 6em;
+}
+ol,ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	transition: all .3s linear;
+	color: #333;
+}
+img{
+	vertical-align: middle;
+	text-align: center;
+	max-width: 100%;
+	height: auto;
+}
+.clear{/*清除浮动*/
+	width: 0 !important;
+	height: 0 !important;
+	clear: both !important;
+	float: none !important;
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.demo{
+	padding-top: 2.5em;
+}
+.demo-title{
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+.demo-title span{
+	display: inline-block;
+    font-size: 175%;
+    line-height: 2;
+    position: relative;
+}
+.demo-title span:after{
+	content: '';
+	width: 50%;
+	height: .125em;
+	background-color: rgba(0,0,0,0.85);
+	position: absolute;
+	bottom: 0;
+	left: 25%;
+}
+
+
+
+
+
+
+/*头部通用样式*******************************************/
+header{
+	width: 100%;
+	position: relative;
+}
+header .top{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: rgba(0,0,0,0.75);
+	box-shadow: 0 0 .5em rgba(0,0,0,0.9);
+	z-index: 30;
+	padding: 1em .5em;
+	height: 6em;
+	box-sizing: border-box;
+}
+.head{
+	width: 100%;
+	height: 4em;
+	max-width: 1200px;
+	position: absolute;
+	left: 50%;
+	transform: translate3d(-50%,0,0);
+	padding: 0 .5em;
+	box-sizing: border-box;
+}
+.logo{
+	height: 100%;
+	float: left;
+	margin-right: 1em;
+}
+.logo img{
+	float: left;
+	max-height: 100%;
+}
+.logo2{
+	float: left;
+	font-size: 175%;
+	line-height: 2.2857143;
+	color: #fff;
+}
+#make{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3em;
+	height: 3em;
+	background: url(http://public.vrfanqie.net/icon/make_white.png) no-repeat center;
+	background-size: 100%;
+	margin-top: -1.5em;
+	margin-left: -1.5em;
+	transition: all .3s linear;
+	display: none;
+}
+#make.on{
+	transform: rotateY(180deg);
+	background: url(http://public.vrfanqie.net/icon/make_white_on.png) no-repeat center;
+	background-size: 100%;
+}
+.head p{
+	font-size: 175%;
+	line-height: 2.2857143;
+	color: #fff;
+	background-size: 1.5em;
+	padding-left: 2em;
+	margin-left: .5em;
+	background: url('http://public.vrfanqie.net/icon/tel.png') no-repeat left center;
+	background-size: 1.5em;
+	float: right;
+}
+.head ul{
+	float: right;
+	padding: .75em 0;
+}
+.head li{
+	display: inline-block;
+}
+.head li a{
+	line-height: 2.857;
+	font-size: 87.5%;
+	color: #ddd;
+	padding: 0 1.5em;
+	display: block;
+	background-color: rgba(0,0,0,0);
+	transition: none;
+}
+.head li a.on,
+.head li a:hover{
+	color: #fff;
+	background-color: rgba(0,0,0,0.95);
+}
+.head li a[href='honor.html'],
+.head li a[href='job.html'],
+.head li a[href='mess.html'],
+.head li a[href='down.html'],
+.head li a[href='form.html'],
+.head li a[href*='other']{
+	display: none;
+}
+/*头部通用样式*******************************************/
+
+
+
+
+
+
+
+
+
+/*左右侧通用样式*******************************************/
+.left{
+	width: 320px;
+	float: left;
+	border: 1px solid #ededed;
+	border-radius: 0.125em;
+	box-sizing: border-box;
+	padding: 0.25em;
+}
+.left h1{
+	line-height: 3;
+	color: #fff;
+	background-color: rgba(40,120,230,.85);
+	text-align: center;
+	font-weight: normal;
+	font-size: 150%;
+}
+.left li{
+	margin: .25em 0;
+	background-color: #efefef;
+	color: rgba(40,120,230,.85);
+}
+.left li a{
+	line-height: 2.5;
+	text-align: center;
+	display: block;
+	color: rgba(40,120,230,.85);
+}
+.left li a.on,
+.left li a:hover{
+	background-color: rgba(40,120,230,.85);
+	color: #efefef;
+}
+.left-contact li{
+	line-height: 2.5;
+	font-size: 87.5%;
+	padding: 0 1em;
+}
+.right{
+	width: calc(100% - 320px);
+	float: right;
+	padding: 1.5em;
+	box-sizing: border-box;
+}
+.nowvisiting{
+	padding: 0 1em;
+	line-height: 3.5;
+	background-color: #efefef;
+	border-radius: .25em;
+	font-size: 87.5%;
+	margin-bottom: 2em;
+}
+.nowvisiting a:hover{
+	color: rgba(40,120,230,.85);
+}
+/*左右侧通用样式*******************************************/
+
+
+
+
+
+
+
+
+
+/*底部通用样式*******************************************/
+footer{
+	width: 100%;
+	background-color: #101010;
+}
+.foot{
+	width: 100%;
+	max-width: 1200px;
+	padding: .5em;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.foot-nav{
+	text-align: center;
+}
+.foot-nav li{
+	display: inline-block;
+	padding: 1em 0;
+}
+.foot-nav li:nth-child(1) a{
+	border-left: none;
+}
+.foot-nav a{
+	line-height: 1;
+	border-left: 1px solid #666;
+	color: #666;
+	display: inline-block;
+	padding: 0 1em;
+	font-size: 87.5%;
+}
+.foot-nav a:hover{
+	color: #eee;
+}
+.copyright{
+	padding-top: 2em;
+	line-height: 2;
+	font-size: 75%;
+	text-align: center;
+	color: #999;
+}
+.copyright a{
+	color: #999;
+}
+.copyright a:hover{
+	color: #fff;
+}
+/*底部通用样式*******************************************/
+
+
+
+
+
+/*首页样式**********************************************/
+.about{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: #eee;
+	transition: all .3s linear;
+}
+.about:hover{
+	box-shadow: 0 .5em 1em 0 rgba(0,0,0,0.2),0 .375em 1.25em 0 rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0 .5em 1em 0 rgba(0,0,0,0.2),0 .375em 1.25em 0 rgba(0,0,0,0.19);
+	-moz-box-shadow: 0 .5em 1em 0 rgba(0,0,0,0.2),0 .375em 1.25em 0 rgba(0,0,0,0.19);
+	-ms-box-shadow: 0 .5em 1em 0 rgba(0,0,0,0.2),0 .375em 1.25em 0 rgba(0,0,0,0.19);
+	-o-box-shadow: 0 .5em 1em 0 rgba(0,0,0,0.2),0 .375em 1.25em 0 rgba(0,0,0,0.19);
+}
+.about-pic{
+	width: 40%;
+	float: left;
+}
+.about-con{
+	width: 60%;
+	padding: 1.125em 1.75em 2.375em;
+	float: right;
+	box-sizing: border-box;
+}
+.about-con a{
+	display: block;
+}
+.about-con p{
+	font-size: 200%;
+	letter-spacing: .125em;
+	line-height: 2;
+}
+.about-con span{
+	display: block;
+	line-height: 2.5;
+	text-indent: 2em;
+	color: #666;
+	font-size: 87.5%;
+	max-height: 17.5em;
+	overflow: hidden;
+}
+.about-con i{
+	font-style: normal;
+	line-height: 2.5;
+	font-size: 87.5%;
+	color: #666;
+	background-color: #fff;
+	transition: all .3s linear;
+	padding: 0 1.25em;
+	display: inline-block;
+	position: relative;
+	float: right;
+}
+.about-con i:after{
+	content: "";
+	display: block;
+	width: 100%;
+	height: .125em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.75);
+	transform: rotateY(90deg);
+	transition: all .3s linear;
+}
+.about:hover i:after{
+	transform: rotateY(0deg);
+}
+.newslist,
+.prolist{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.prolist li{
+    width: 25%;
+	float: left;
+	padding: .5em;
+	box-sizing: border-box;
+}
+.prolist li a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.prolist li a:hover{
+	box-shadow: 0 0 .5em rgba(0,0,0,0.5);
+}
+.prolist li img{
+	position: relative;
+	top: 0;
+	left: 0;
+	transition: all .3s linear;
+}
+.prolist li span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.65);
+	color: #fff;
+	font-size: 87.5%;
+	box-sizing: border-box;
+	transition: all .3s linear;
+	padding: 1em 0;
+	text-align: center;
+}
+.prolist li a:hover span{
+	width: 3em;
+	padding: 1em;
+}
+.prolist li a:hover img{
+	left: 2.625em;
+}
+.newslist li{
+    width: calc(50% - 2em);
+    float: left;
+    margin: 0 1em;
+    box-sizing: border-box;
+    padding: 0 1em;
+    border-bottom: 1px dotted #ddd;
+}
+.newslist li a{
+    float: left;
+    width: 65%;
+    font-size: 87.5%;
+    line-height: 3.4;
+    height: 3.4em;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+.newslist li a:hover{
+	color: rgb(40,120,230);
+	padding-left: .125em;
+}
+.newslist li span{
+    float: right;
+    font-size: 75%;
+    color: #aaa;
+    line-height: 4;
+}
+.tel-bg{
+	margin: 2.5em 0 1.5em;
+	background-position:center;
+	background-attachment: fixed;
+	background-repeat: repeat-y;
+}
+.tel-bg:nth-child(3){
+	background-image: url('http://public.vrfanqie.net/tel-bg/tel1.jpg');
+}
+.tel-bg:nth-child(6){
+	background-image: url('http://public.vrfanqie.net/tel-bg/tel2.jpg');
+}
+.tel-bg:nth-child(9){
+	background-image: url('http://public.vrfanqie.net/tel-bg/tel3.jpg');
+}
+.tel{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1em;
+	box-sizing: border-box;
+}
+.tel span{
+	font-size: 225%;
+	color: #fff;
+	line-height: 5;
+}
+.tel a{
+	color: #fff;
+	text-decoration: underline;
+}
+.tel-content{
+	float: left;
+}
+.tel-hotline{
+	float: right;
+}
+.contact-box{
+	padding: 2.5em 0;
+	background-color: rgba(200,200,200,.75);
+}
+/*.contact-message,*/
+.contact-list,
+.contact-map{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 .5em;
+	box-sizing: border-box;
+}
+.contact-list li{
+	width: calc(50% - 2em);
+	padding: 0 1em;
+	margin: 1em;
+	float: left;
+	box-sizing: border-box;
+	border-radius: .25em;
+	line-height: 3;
+	height: 3em;
+	overflow: hidden;
+	font-size: 87.5%;
+	background-color: #eee;
+}
+.contact-map{
+	padding: 0 1.25em;
+}
+/*
+.contact-message input,
+.contact-message textarea{
+	width: calc(50% - 2em);
+	padding: 0 1em;
+	line-height: 2;
+	font-size: 87.5%;
+	box-sizing: border-box;
+	border-radius: .25em;
+	margin: 1em;
+	background-color: #fff;
+	transition: all .3s linear;
+}
+.contact-message input{
+	height: 2.5em;
+	float: left;
+}
+.contact-message textarea{
+	width: calc(50% - 10em);
+	height: 6.895em;
+	float: right;
+	border: none;
+	resize: none;
+}
+.contact-message input:focus,
+.contact-message textarea:focus{
+	box-shadow: 0 0 0.25em rgba(255,255,255,.85);
+}
+.contact-message input[name='GoaddMess']{
+	float: right;
+	width: 6em;
+	height: 6.895em;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+}
+.contact-message input[name='GoaddMess']:hover{
+	background-color: rgba(0,0,0,0.75);
+	box-shadow: none;
+}*/
+/*首页样式**********************************************/
+
+
+
+
+/*列表样式*/
+.list-article li{
+	width: 100%;
+	border-bottom: 1px dotted #999;
+	height: 2.625em;
+	overflow: hidden;
+	padding: 0 .25em;
+	box-sizing: border-box;
+}
+.list-article li a{
+	width: 60%;
+	float: left;
+	color: #333;
+	line-height: 3;
+	overflow: hidden;
+	font-size: 87.5%;
+}
+.list-article li a:hover{
+	margin-left: .25em;
+	color: rgba(40,120,230,.85);
+}
+.list-article li span{
+	float: right;
+	line-height: 3.5;
+	font-size: 75%;
+	color: #999;
+}
+/*列表样式*/
+
+
+
+/*分页*/
+.page{
+	line-height: 4;
+	text-align: right;
+}
+/*分页*/
+
+
+
+
+/*详情*/
+.article-title{
+	font-size: 150%;
+	line-height: 3;
+}
+.article-info{
+	color: #aaa;
+	font-size: 87.5%;
+	line-height: 3;
+	margin-bottom: 2em;
+}
+.prev-next{
+	padding: 1em 0;
+}
+.prev-next span,
+.prev-next a{
+	line-height: 2.5;
+	font-size: 87.5%;
+	color: #aaa;
+}
+.prev-next a:hover{
+	color: rgba(40,120,230,.85);
+}
+.article-img > a:nth-child(1){
+	display: block;
+	text-align: center;
+}
+/*详情*/
+
+
+
+/*留言*/
+.contact-message p{
+	line-height: 2.5;
+}
+#addly{
+	width: 100%;
+	padding-top: 3em;
+	max-width: 500px;
+}
+#name,
+#contact,
+#content,
+#addly input[type='submit']{
+	width: 100%;
+	line-height: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	font-size: 87.5%;
+	border: 1px solid #ddd;
+	border-radius: .25em;
+	transition: all .3s linear;
+	box-sizing: border-box;
+}
+#content{
+	height: 6.75em;
+	line-height: 2.25em;
+	resize: none;
+}
+#name:focus,
+#contact:focus,
+#content:focus{
+	box-shadow: 0 0 .25em rgba(40,120,230,.65);
+}
+#addly input[type='submit']{
+	background-color: rgba(40,120,230,.85);
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+}
+#addly input[type='submit']:hover{
+	background-color: rgba(40,120,230,.95);
+}
+
+
+@media only screen and (max-width: 1150px){
+	.head li a{
+		padding: 0 .75em;
+	}
+	.about{
+		max-width: 880px;
+	}
+	.about-con span{
+		max-height: 12.5em;
+	}
+}
+@media only screen and (max-width: 1020px){
+	.head ul{
+		display: none;
+		float: none;
+		position: absolute;
+		top: 5em;
+		left: 0;
+		width: 100%;
+		padding: 0;
+		background-color: rgba(0,0,0,0.75);
+		box-shadow: 0 0 .5em rgba(0,0,0,0.9);
+	}
+	.head ul li{
+		width: 100%;
+		display: block;
+	}
+	.head li a{
+		font-size: 100%;
+		line-height: 3;
+		text-align: center;
+		border-bottom: 2px solid rgba(230,120,40,.75);
+	}
+	#make{
+		display: block;
+	}
+	.head li a[href="honor.html"],
+	.head li a[href="job.html"],
+	.head li a[href="mess.html"],
+	.head li a[href="down.html"],
+	.head li a[href="form.html"],
+	.head li a[href*="other"]{
+	    display: block;
+	}
+}
+@media only screen and (max-width: 900px){
+	body{
+		padding-top: 4em;
+	}
+	header .top{
+		padding: .5em;
+		height: 4em;
+	}
+	.head{
+		height: 3em;
+	}
+	.head ul{
+		top: 3.5em;
+	}
+	.logo2{
+		line-height: 1.7145;
+	}
+	.head p{
+		display: none;
+	}
+	#make{
+		right: 0.5em;
+		left: auto;
+	}
+	.about{
+		max-width: 600px;
+		padding: .5em;
+		box-sizing: border-box;
+	}
+	.about-pic,
+	.about-con{
+		width: 100%;
+		float: none;
+	}
+	.about-con i{
+		float: none;
+		left: 50%;
+		transform: translate3d(-50%,0,0);
+	}
+	.tel span{
+		font-size: 150%;
+		line-height: 7;
+	}
+	.contact-list li{
+		width: calc(100% - 2em);
+		height: auto;
+	}
+}
+@media only screen and (max-width: 750px){
+	.newslist li{
+		width: 100%;
+		margin: 0;
+	}
+	#l{
+		display: none;
+	}
+	.prolist li,
+	.cplist{
+		width: 50%;
+	}
+	.pc{
+		display: none;
+	}
+	.yd{
+		display: block;
+	}
+	.contact-td{
+		width: 100%;
+		float: none;
+	}
+	.left{
+		display: none;
+	}
+	.right{
+		width: 100%;
+		float: none;
+	}
+	.prolist li a:hover img{
+		left: 0;
+	}
+	.prolist li span{
+		width: 100%;
+		height: 3em;
+		top: auto;
+		bottom: 0;
+		line-height: 1em;
+	}
+	.prolist li a:hover span{
+		width: 100%;
+		height: 3em;
+	}
+}
+@media only screen and (max-width: 600px){
+	.tel span{
+		font-size: 125%;
+		line-height: 9;
+	}
+}
+@media only screen and (max-width: 480px){
+	#make{
+		right: 1.5em;
+		width: 2em;
+	}
+	.logo2{
+		font-size: 100%;
+		line-height: 3;
+	}
+	.demo-title a{
+		line-height: 2.5;
+		font-size: 125%;
+	}
+	.right{
+		padding: 0.5em;
+	}
+	.tel span{
+		font-size: 150%;
+		line-height: 4;
+		display: block;
+		float: none;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 360px){
+	.newslist li a{
+		max-width: 100%;
+	}
+	.newslist li span{
+		display: none;
+	}
+	.list-article li span.job{
+		width: 33.3333333%;
+	}
+	.list-article li span.job.xinjin{
+		display: none;
+	}
+}
